@@ -1,0 +1,95 @@
+- separate out location and residents and setup relationship
+- create history for resident location because you may want to know last month between two dates who stayed in that location
+		- create a trigger
+- add two more columns to location-resident mapping table or in one of them for residentIn and residentOut DATETIME
+	- history can be maintained on this
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+windows server
+	- static IP address
+	- C:\Windows\System32\drivers\etc\hosts file
+		- open notepad in admin mode (right click on notepad.exe and run as admin)
+		- edit the hosts file and for the static IP address set the host name like 
+			- www.hootusraj.com
+	- any laptop with LAN conn to this network should be able to access this webpage
+	- add WAMP.exe to windows 10 start up so that on power cycle the web comes up on its own
+Webserver:
+	- always on
+	- secured
+	- add a new admin user
+	- add a new device
+	- edit a location profile - like contact number, email id 
+	- add a new location (this requires new panel and device config)
+	- to add multiple locations, provide excel upload facility
+	- see the fire alarm status continuously
+	- get a dashboard of previous alarms
+		- how many alarms
+		- how long it took to reset the alarm
+	- enter faulty device data
+	- static files cached
+	- .htaccess to cache static folder files
+	- https 
+
+
+
+MySQL
+	- WAMP - MySQL host server with a name to be setup
+		- all arudinos will point to this host name
+		- so if customer changes the server or IP address, still they can configure this as host name and be done
+	- continuous update from Arduino
+	- secured access
+	- back-up on daily basis - automatic periodic back-up 
+	- procedure to restore
+	- trigger to delete 1 month back data
+	- create a user in MySQL such that all arduinos use that user id and password only to Select and Update location table and no other permission
+	CREATE USER 'arduino'@'%' IDENTIFIED BY 'Arduino_Hootus_!@#';
+	GRANT SELECT, UPDATE ON hootus.location TO 'arduino'@'%';
+	FLUSH PRIVILEGES;
+
+
+ ALTER USER 'root'@'localhost' IDENTIFIED BY 'root123';
+ GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'root123' WITH GRANT OPTION;
+ FLUSH PRIVILEGES;
+ GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root123' WITH GRANT OPTION;
+
+what happens when network / power goes down
+	- when power restores, procedure to bring up the WAMP server
+	-
+webpage
+	- refresh every 5 seconds - only the alarm report panel in the first page
+	- show Total number of locations, location without any warning and with warning
+		- Total Locations: 4000
+		- No Alarms: 3095
+		- With Alarms: 5
+		- The above one as table
+		- animated h1 tag 'LOCATIONS WITH ACTIVE FIRE ALARM'
+		- a table below with details
+		- at the top, a refresh button
+		- there is no soft reset because only when the firealarm panel is reset, the alarm will go away
+		- if there is a problem
+arduino software 
+	- may be load it in mutiple laptops in customer location and share the mysql dB
+	- educate user how to add a new device, unique location id
+	- 
+	- 
+
+get a decent web app for dashboard and user/device forms
+
+
+dashboard
+	- show history of alarms
+	- how much time it took to reset
+	- 
+

@@ -1,0 +1,319 @@
+/*START of table style */
+#mhead{
+background-color: #f5f5f5;
+border: 1px solid #e3e3e3;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+text-align: center; 
+font-family: georgia;
+}
+
+/*#searchMemebershipDIV {
+    border-radius: 10px;
+    border: 2px solid #8AC007;
+    padding: 10px; 
+    width: 400px;
+    height: 10px; 
+}*/
+
+/*START of table style */
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+    -webkit-column-height:100%;
+    -moz-column-height:100%;
+    height:100%;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+th,td {
+      border: 1px solid black;
+      border-collapse: collapse;
+}
+.in_size,.effortNewLoad:enabled,input#comment:enabled  {
+  border: 1.5px solid blue;
+}
+.opt_text{
+  color:red;
+}
+#td_total,tr#totalTopRow,tr#totalBottomRow,td#total{
+  background-color: #F2F5A9;
+  text-align: center;
+  font-size:small;
+  font-weight: bold;
+}
+td.editRow_total_td{
+  background-color: #FACC2E;
+  text-align: center;
+  font-size:small;
+  font-weight: bold;
+}
+td.td_data,.td_effortUpdate{
+  text-align: center;
+  font-size:small;
+}
+#headerRow {
+  background-color: #D0F5A9;
+}
+#newRow {
+  background-color: #00BFFF;
+}
+#footerRow {
+  background-color: #BDBDBD;
+  text-align: center;
+  font-size:small;
+}
+
+#L1MgrList {
+  background-color: #819FF7;
+}
+#th_mgrID {
+    -webkit-column-width: 170px;
+    -moz-column-width: 170px;
+    width:170px;
+}
+#th_userID {
+    -webkit-column-width: 160px;
+    -moz-column-width: 160px;
+    width:160px;
+}
+#th_program {
+    -webkit-column-width: 120px;
+    -moz-column-width: 120px;
+    width:120px;
+}
+#th_project {
+    -webkit-column-width: 70px;
+    -moz-column-width: 70px;
+    width:70px;
+}
+#th_activity {
+    -webkit-column-width: 140px;
+    -moz-column-width: 140px;
+    width:140px;
+}
+#th_comment {
+    font-size:small;
+    -webkit-column-width: 150px;
+    -moz-column-width: 150px;
+    width:150px;
+    text-align: left;
+}
+#th_action,#th_total {
+    font-size:small;
+    -webkit-column-width: 50px;
+    -moz-column-width: 50px;
+    width:50px;
+    text-align: center;
+}
+.th_months {
+    font-size:small;
+    -webkit-column-width: 50px;
+    -moz-column-width: 50px;
+    width:50px;
+    text-align: center;
+}
+input#comment,input.comment {
+  -webkit-column-width: 98%;
+  -moz-column-width: 98%;
+  width: 98%;
+}
+select#activityList,select#programList,.effortNewLoad,.td_effortUpdate,.in_size {
+  -webkit-column-width: 95%;
+  -moz-column-width: 95%;
+  width: 95%;
+}
+/*END of table style */
+#submit:enabled {
+     background-color: #2E64FE;
+      display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#resetSelections:enabled {
+  background-color: #F5DA81;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#btn_reset:disabled,#btn_updateall:disabled,#submit:disabled,#resetSelections:disabled {
+  cursor: default;
+  pointer-events: none;
+  color: #c0c0c0;
+  background-color: #ffffff;
+}
+
+#resetToolTip {
+    display: inline-block;
+}
+#btn_reset:enabled{
+     background-color: #FFFF00;
+}
+
+.btn_edit:enabled{
+     background-color: #D8F6CE;
+}
+.btn_cancel:enabled{
+     background-color: #FFFF00;
+}
+#btn_updateall:enabled{
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 10px auto;
+    color: #2E2E2E;
+    background-color: #0080FF;
+    border: 0 none;
+    border-radius: 3px;
+    text-shadow: 0 -1px 0 #000;
+    box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+
+/*alert box styling start*/
+#modalContainer {
+  background-color:rgba(0, 0, 0, 0.3);
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:10000;
+  background-image:url(tp.png); /* required by MSIE to prevent actions on lower z-index elements */
+}
+
+#alertBox {
+  position:relative;
+  width:300px;
+  min-height:100px;
+  margin-top:50px;
+  border:1px solid #666;
+  background-color:#fff;
+  /*background-color:#FACC2E;*/
+  background-repeat:no-repeat;
+  background-position:20px 30px;
+}
+
+#modalContainer > #alertBox {
+  position:fixed;
+}
+
+#alertBox h1 {
+  margin:0;
+  font:bold 0.9em verdana,arial;
+  /*background-color:#3073BB;*/
+  background-color:#F7D358;
+  color:#000000;
+  border-bottom:1px solid #000;
+  padding:2px 0 2px 5px;
+
+}
+
+#alertBox p {
+  font:0.8em verdana,arial;
+  height:50px;
+  padding-left:5px;
+  /*margin-left:55px;*/
+  margin-left:20px;
+}
+
+#alertBox #closeBtn {
+  display:block;
+  position:relative;
+  margin:5px auto;
+  padding:7px;
+  border:0 none;
+  width:70px;
+  font:bold 0.7em verdana,arial;
+  text-transform:uppercase;
+  text-align:center;
+  /*color:#FFF;
+  background-color:#357EBD;*/
+  color:#000000;
+  background-color:#F7D358;
+  border-radius: 3px;
+  text-decoration:none;
+}
+
+/* unrelated styles */
+
+#mContainer {
+  position:relative;
+  width:600px;
+  margin:auto;
+  padding:5px;
+  border-top:2px solid #000;
+  border-bottom:2px solid #000;
+  font:0.7em verdana,arial;
+}
+
+h1,h2 {
+  margin:0;
+  padding:4px;
+  font:bold 1.5em verdana;
+  border-bottom:1px solid #000;
+}
+
+code {
+  font-size:1.2em;
+  color:#069;
+}
+
+#credits {
+  position:relative;
+  margin:25px auto 0px auto;
+  width:350px; 
+  font:0.7em verdana;
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+  height:90px;
+  padding-top:4px;
+}
+
+#credits img {
+  float:left;
+  margin:5px 10px 5px 0px;
+  border:1px solid #000000;
+  width:80px;
+  height:79px;
+}
+
+.important {
+  background-color:#F5FCC8;
+  padding:2px;
+}
+
+code span {
+  color:green;
+}
+/*alert box styling end*/
+
+/*table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+    -webkit-column-height:100%;
+    -moz-column-height:100%;
+    height:100%;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+th,td {
+      border: 1px solid black;
+      border-collapse: collapse;
+}*/

@@ -1,0 +1,17 @@
+
+
+-- LAN firewall control
+-- local DNS entry to match a static IP address (or two) to local domain name like www.hootusraj.com
+-- DHCP to provide local DNS server where static IP and local domain name is configured
+-- how location and residents are mapped; can we assume some uniqueness for every customer, like primary contact number and email combo key
+
+
+- Database modelling has flexibility
+- Role based access control
+- maintain a todo list inside the application- anyone with permission can access it
+- Encrypted password control - we can make alarms page to display even without login if required and make other pages with login protection
+- Every entity can have some notes against them
+- we can enforce users to change their password on first login\
+- excel uploads
+- we can automate userids
+- 

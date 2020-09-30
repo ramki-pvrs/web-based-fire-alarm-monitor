@@ -1,0 +1,17 @@
+http://thisinterestsme.com/php-csrf-protection/
+
+https://blog.myetv.tv/2017/09/18/writing-secure-code-how-myetv-do-crypt-auth-transfer-and-store-informations/
+
+http://shiflett.org/articles/cross-site-request-forgeries
+
+random_bytes in next link
+https://stackoverflow.com/questions/2593807/md5uniqid-makes-sense-for-random-unique-tokens
+
+https://www.owasp.org/index.php/PHP_CSRF_Guard
+
+search string
+php CSRF "random_bytes" "hash_equals"
+
+
+TRY THIS FIRST
+https://www.owasp.org/index.php/CSRFProtector_Project
